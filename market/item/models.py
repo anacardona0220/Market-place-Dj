@@ -12,7 +12,7 @@ class Category(models.Model):
     def __str__(self):
         return self.name  #para que me muestre los nombres de las categorias  
     
-class Items(models.Model):
+class Item(models.Model):
     category = models.ForeignKey(Category, related_name='items', on_delete=models.CASCADE)
     name = models.CharField(max_length=255)
     description = models.TextField(blank=True, null=True)
